@@ -1,0 +1,67 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.8125rem;
+}
+@media (min-width: 40em) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.header__subtitle {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--dark-text1);
+}
+.header .toggle {
+  display: flex;
+  justify-self: end;
+  justify-content: end;
+  align-items: center;
+}
+.header .toggle__label {
+  font-size: 0.875rem;
+  color: var(--toggle-label);
+  margin-right: 0.625rem;
+}
+.header .toggle__theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 3.75rem;
+  height: 2.125rem;
+}
+.header .toggle__theme-switch input {
+  display: none;
+}
+.header .toggle__slider {
+  position: absolute;
+  inset: 0;
+  background-color: var(--toggle-bg);
+  border-radius: 2.125rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.header .toggle {
+  /* Circle */
+}
+.header .toggle__slider::before {
+  content: "";
+  position: absolute;
+  height: 1.625rem;
+  width: 1.625rem;
+  left: 0.25rem;
+  bottom: 0.25rem;
+  background: var(--toggle-button);
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.header .toggle {
+  /* Checked */
+}
+.header .toggle input:checked + .toggle__slider {
+  background-color: var(--toggle-bg);
+}
+.header .toggle input:checked + .toggle__slider::before {
+  transform: translateX(1.625rem);
+}
