@@ -4,19 +4,184 @@
   <meta charset='utf-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <title>Page Title</title>
+  <!-- CSS Styles -->
   <link rel='stylesheet' href='dist/styles.css'>
+  <!-- JS Functions -->
   <script defer src="app/js/main.js"></script>
+  <!-- Font Awesome Kit CDN -->
+  <script src="https://kit.fontawesome.com/c5204bb4f1.js" crossorigin="anonymous"></script>
+  <!-- Font Style CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body id="body">
   <div class="container">
-    <header>
-      <h1>Social Media Dashboard</h1>
-      <span>Total followers: 23,004</span>
+    <header class="header">
+      <div class="header__left">
+        <h1 class="header__title">Social Media Dashboard</h1>
+        <span class="header__subtitle">Total Followers: 23,004</span>
+      </div>
 
-      Dark Mode
+      <div class="toggle">
+        <span class="toggle__label">Dark Mode</span>
+        <label class="toggle__theme-switch">
+          <input type="checkbox" id="theme-toggle">
+          <span class="toggle__slider"></span>
+        </label>
+      </div>
     </header>
-    <main>
-  
+    <main class="main">
+      <section class="section cards-section-top">
+        <div class="card card--facebook">
+          <div class="card__user">
+            <i class="plat-icon plat-icon--facebook fa-brands fa-facebook"></i>
+            <span class="username">@username</span>
+          </div>
+          <div class="card__followers">
+            <div class="card__count">1987</div>
+            <div class="card__label">FOLLOWERS</div>
+          </div>
+          <div class="card__rating card__rating--up">
+            <i class="rat-icon fa-solid fa-caret-up"></i>
+            <span class="rat-label">12 Today</span>
+          </div>
+        </div>
+        <div class="card card--x">
+          <div class="card__user">
+            <i class="plat-icon plat-icon--x fa-brands fa-x-twitter"></i>
+            <span class="username">@username</span>
+          </div>
+          <div class="card__followers">
+            <div class="card__count">1044</div>
+            <div class="card__label">FOLLOWERS</div>
+          </div>
+          <div class="card__rating card__rating--up">
+            <i class="rat-icon fa-solid fa-caret-up"></i>
+            <span class="rat-label">99 Today</span>
+          </div>
+        </div>
+        <div class="card card--instagram">
+          <div class="card__user">
+            <i class="plat-icon plat-icon--instagram fa-brands fa-instagram"></i>
+            <span class="username">@username</span>
+          </div>
+          <div class="card__followers">
+            <div class="card__count">11k</div>
+            <div class="card__label">FOLLOWERS</div>
+          </div>
+          <div class="card__rating card__rating--up">
+            <i class="rat-icon fa-solid fa-caret-up"></i>
+            <span class="rat-label">1099 Today</span>
+          </div>
+        </div>
+        <div class="card card--youtube">
+          <div class="card__user">
+            <i class="plat-icon plat-icon--youtube fa-brands fa-youtube"></i>
+            <span class="username">@username</span>
+          </div>
+          <div class="card__followers">
+            <div class="card__count">8239</div>
+            <div class="card__label">FOLLOWERS</div>
+          </div>
+          <div class="card__rating card__rating--down">
+            <i class="rat-icon fa-solid fa-caret-down"></i>
+            <span class="rat-label">144 Today</span>
+          </div>
+        </div>
+      </section>
+
+      <h2>Overview - Today</h2>
+      <section class="section cards-section-down">
+        <div class="card card-grid">
+          <div class="card__subtitle">Page Views</div>
+          <div class="card__count">87</div>
+          <div class="card__rating card__rating--up">
+            <i class="rat-icon fa-solid fa-caret-up"></i>
+            <span class="rat-label">3%</span>
+          </div>
+          <div class="icon">
+            <i class="plat-icon plat-icon--facebook fa-brands fa-facebook"></i>
+          </div>
+        </div>
+        <div class="card card-grid">
+          <div class="card__subtitle">Likes</div>
+          <div class="card__count">52</div>
+          <div class="card__rating card__rating--down">
+            <i class="rat-icon fa-solid fa-caret-down"></i>
+            <span class="rat-label">2%</span>
+          </div>
+          <div class="icon">
+            <i class="plat-icon plat-icon--facebook fa-brands fa-facebook"></i>
+          </div>
+        </div>
+        <div class="card card-grid">
+          <div class="card__subtitle">Likes</div>
+          <div class="card__count">5462</div>
+          <div class="card__rating card__rating--up">
+            <i class="rat-icon fa-solid fa-caret-up"></i>
+            <span class="rat-label">2257%</span>
+          </div>
+          <div class="icon">
+            <i class="plat-icon plat-icon--instagram fa-brands fa-instagram"></i>
+          </div>
+        </div>
+        <div class="card card-grid">
+          <div class="card__subtitle">Profile Views</div>
+          <div class="card__count">52k</div>
+          <div class="card__rating card__rating--up">
+            <i class="rat-icon fa-solid fa-caret-up"></i>
+            <span class="rat-label">1137%</span>
+          </div>
+          <div class="icon">
+            <i class="plat-icon plat-icon--instagram fa-brands fa-instagram"></i>
+          </div>
+        </div>
+        <div class="card card-grid">
+          <div class="card__subtitle">Reposts</div>
+          <div class="card__count">117</div>
+          <div class="card__rating card__rating--up">
+            <i class="rat-icon fa-solid fa-caret-up"></i>
+            <span class="rat-label">303%</span>
+          </div>
+          <div class="icon">
+            <i class="plat-icon plat-icon--x fa-brands fa-x-twitter"></i>
+          </div>
+        </div>
+        <div class="card card-grid">
+          <div class="card__subtitle">Likes</div>
+          <div class="card__count">507</div>
+          <div class="card__rating card__rating--up">
+            <i class="rat-icon fa-solid fa-caret-up"></i>
+            <span class="rat-label">553%</span>
+          </div>
+          <div class="icon">
+            <i class="plat-icon plat-icon--x fa-brands fa-x-twitter"></i>
+          </div>
+        </div>
+        <div class="card card-grid">
+          <div class="card__subtitle">Likes</div>
+          <div class="card__count">107</div>
+          <div class="card__rating card__rating--down">
+            <i class="rat-icon fa-solid fa-caret-down"></i>
+            <span class="rat-label">19%</span>
+          </div>
+          <div class="icon">
+            <i class="plat-icon plat-icon--youtube fa-brands fa-youtube"></i>
+          </div>
+        </div>
+        <div class="card card-grid">
+          <div class="card__subtitle">Total Views</div>
+          <div class="card__count">1407</div>
+          <div class="card__rating card__rating--down">
+            <i class="rat-icon fa-solid fa-caret-down"></i>
+            <span class="rat-label">12%</span>
+          </div>
+          <div class="icon">
+            <i class="plat-icon plat-icon--youtube fa-brands fa-youtube"></i>
+          </div>
+        </div>
+      </section>
     </main>
   </div>  
 </body>

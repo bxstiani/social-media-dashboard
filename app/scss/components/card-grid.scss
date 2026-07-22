@@ -5,19 +5,67 @@
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: repeat(2, auto);
 	justify-items: start;
-	gap: rem(23);
+	gap: rem(14);
 
-	.card__count {
-		margin-bottom: 0;
+	.card__subtitle {
+		font-size: rem(18);
+		font-weight: bold;
+  	color: var(--text-color2);
+		text-align: start;
+
+		@include breakpoint(large) {
+			font-size: rem(14);
+		}
 	}
 
+	.card__count {
+		grid-column: 1;
+		grid-row: 2;
+		margin-bottom: 0;
+		font-size: rem(30);
+		font-weight: bold;
+	}
+	
 	.card__count,
-	.card__change {
+	.card__rating {
 		align-self: end;
 	}
 
-	img,
-	.card__change {
+	.icon {
+		grid-column: 2;
+		grid-row: 1;
+
+		.plat-icon {
+      font-size: rem(25);
+      
+      &--facebook {
+        color: var(--facebook);
+      }
+      
+      &--x {
+        color: var(--x);
+      }
+      
+      &--instagram {
+        background-image: linear-gradient(225deg, 
+          var(--instagram-end),
+          var(--instagram-middle) 50.91%,
+          var(--instagram-start));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+        display: inline-block; 
+      }
+      
+      &--youtube {
+        color: var(--youtube);
+      }
+    }
+	}
+
+	.icon,
+	.card__rating {
 		justify-self: end;
 	}
 }

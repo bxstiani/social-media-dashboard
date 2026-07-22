@@ -1,0 +1,73 @@
+@use '../util' as *;
+
+.header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: rem(45);
+
+  @include breakpoint(medium) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__subtitle {
+    font-size: rem(14);
+    font-weight: 700;
+    color: var(--dark-text1);
+  }
+  
+  .toggle {
+    display: flex;
+    justify-self: end;
+    justify-content: end;
+    align-items: center;
+
+    &__label {
+      font-size: rem(14);
+      color: var(--toggle-label);
+      margin-right: rem(10);
+    }
+
+    &__theme-switch {
+      position: relative;
+      display: inline-block;
+      width: rem(60);
+      height: rem(34);
+    }
+  
+    &__theme-switch input {
+      display: none;
+    }
+  
+    &__slider {
+      position: absolute;
+      inset: 0;
+      background-color: var(--toggle-bg);
+      border-radius: rem(34);
+      cursor: pointer;
+      transition: 0.3s;
+    }
+  
+    /* Circle */
+    &__slider::before {
+      content: "";
+      position: absolute;
+      height: rem(26);
+      width: rem(26);
+      left: rem(4);
+      bottom: rem(4);
+      background: var(--toggle-button);
+      border-radius: 50%;
+      transition: 0.3s;
+    }
+  
+    /* Checked */
+    input:checked + .toggle__slider {
+      background-color: var(--toggle-bg);
+    }
+  
+    input:checked + .toggle__slider::before {
+      transform: translateX(rem(26));
+    }
+  }
+}

@@ -1,1 +1,126 @@
 @use '../util' as *;
+
+.card {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--card-bg);
+  border-radius: rem(5);
+  padding: rem(25);
+  text-align: center;
+  transition: background 150ms ease-in-out;
+  
+  &:hover {
+    background: var(--card-hover);
+    cursor: pointer;
+  }
+
+  &__user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: rem(5);
+    padding-bottom: rem(25);
+    margin: rem(8) 0 0 0;
+    font-size: rem(13);
+  
+    .plat-icon {
+      font-size: rem(25);
+      
+      &--facebook {
+        color: var(--facebook);
+      }
+      
+      &--x {
+        color: var(--x);
+      }
+      
+      &--instagram {
+        background-image: linear-gradient(225deg, 
+          var(--instagram-end),
+          var(--instagram-middle) 50.91%,
+          var(--instagram-start));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+        display: inline-block; 
+      }
+      
+      &--youtube {
+        color: var(--youtube);
+      }
+    }
+
+    .username {
+      font-weight: bold;
+      color: var(--text-color2);
+    }
+  }
+
+  &__followers {
+    margin-bottom: rem(20);
+
+    .card__count {
+      color: var(--text-color);
+      font-size: rem(52);
+      font-weight: 700;
+      letter-spacing: rem(-1);
+      line-height: 1;
+      margin-bottom: rem(5);
+    }
+
+    .card__label {
+      color: var(--text-color2);
+      font-size: rem(12);
+      letter-spacing: rem(5);
+    }
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(5);
+    font-size: rem(13);
+    
+    .rat-label {
+      font-weight: bold;
+    }
+    
+    &--up {
+      color: var(--limegreen);
+    }
+
+    &--down {
+      color: var(--brightred);
+    }
+  }
+
+  &--facebook {
+    border-top: rem(5) solid var(--facebook);
+  }
+
+  &--x {
+    border-top: rem(5) solid var(--x);
+  }
+
+  &--instagram::before {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: rem(5);
+    background: linear-gradient(
+      225deg,
+      var(--instagram-end),
+      var(--instagram-middle) 50.91%,
+      var(--instagram-start) 100%
+    );
+  }
+
+  &--youtube {
+    border-top: rem(5) solid var(--youtube);
+  }
+}

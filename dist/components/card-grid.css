@@ -3,16 +3,55 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, auto);
   justify-items: start;
-  gap: 1.4375rem;
+  gap: 0.875rem;
+}
+.card-grid .card__subtitle {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: var(--text-color2);
+  text-align: start;
+}
+@media (min-width: 71.875em) {
+  .card-grid .card__subtitle {
+    font-size: 0.875rem;
+  }
 }
 .card-grid .card__count {
+  grid-column: 1;
+  grid-row: 2;
   margin-bottom: 0;
+  font-size: 1.875rem;
+  font-weight: bold;
 }
 .card-grid .card__count,
-.card-grid .card__change {
+.card-grid .card__rating {
   align-self: end;
 }
-.card-grid img,
-.card-grid .card__change {
+.card-grid .icon {
+  grid-column: 2;
+  grid-row: 1;
+}
+.card-grid .icon .plat-icon {
+  font-size: 1.5625rem;
+}
+.card-grid .icon .plat-icon--facebook {
+  color: var(--facebook);
+}
+.card-grid .icon .plat-icon--x {
+  color: var(--x);
+}
+.card-grid .icon .plat-icon--instagram {
+  background-image: linear-gradient(225deg, var(--instagram-end), var(--instagram-middle) 50.91%, var(--instagram-start));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  display: inline-block;
+}
+.card-grid .icon .plat-icon--youtube {
+  color: var(--youtube);
+}
+.card-grid .icon,
+.card-grid .card__rating {
   justify-self: end;
 }
